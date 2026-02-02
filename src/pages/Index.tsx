@@ -87,7 +87,7 @@ const Index = () => {
         <div className="luxury-container">
           <div className="max-w-3xl mx-auto text-center">
             <div className="gold-divider mx-auto mb-8" />
-            <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 font-serif">
+            <p className="text-xl md:text-2xl leading-relaxed text-foreground/90 font-sans">
               RK AccTx is your trusted, long-term partner for sophisticated 
               accounting, strategic tax planning, and bespoke advisory services. 
               We cultivate relationships built on{" "}
@@ -120,7 +120,7 @@ const Index = () => {
                 <div className="w-14 h-14 rounded-sm bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
                   <service.icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="font-serif text-xl md:text-2xl text-foreground mb-4 group-hover:text-primary transition-colors">
+                <h3 className="font-sans text-xl md:text-2xl text-foreground mb-4 group-hover:text-primary transition-colors">
                   {service.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
@@ -137,7 +137,7 @@ const Index = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 md:py-32 bg-navy-900">
+      <section className="py-24 md:py-32 bg-navy-700">
         <div className="luxury-container">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">

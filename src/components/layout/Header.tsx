@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.jpg";
+import logo from "@/assets/logo.png";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -34,17 +34,8 @@ const navigation = [
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const location = useLocation();
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
 
   useEffect(() => {
     setIsOpen(false);
@@ -52,13 +43,7 @@ export function Header() {
   }, [location]);
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg shadow-foreground/5"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg shadow-foreground/5">
       <nav className="luxury-container">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
@@ -85,11 +70,10 @@ export function Header() {
                     <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${dropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <div
-                    className={`absolute top-full left-0 w-72 pt-2 transition-all duration-300 ${
-                      dropdownOpen
-                        ? "opacity-100 translate-y-0 pointer-events-auto"
-                        : "opacity-0 -translate-y-2 pointer-events-none"
-                    }`}
+                    className={`absolute top-full left-0 w-72 pt-2 transition-all duration-300 ${dropdownOpen
+                      ? "opacity-100 translate-y-0 pointer-events-auto"
+                      : "opacity-0 -translate-y-2 pointer-events-none"
+                      }`}
                   >
                     <div className="bg-background border border-border rounded-sm shadow-elevated overflow-hidden">
                       {item.dropdown.map((subItem) => (
@@ -111,11 +95,10 @@ export function Header() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-4 py-2 text-sm font-medium transition-colors ${
-                    location.pathname === item.href
-                      ? "text-primary"
-                      : "text-foreground/70 hover:text-primary"
-                  }`}
+                  className={`px-4 py-2 text-sm font-medium transition-colors ${location.pathname === item.href
+                    ? "text-primary"
+                    : "text-foreground/70 hover:text-primary"
+                    }`}
                 >
                   {item.name}
                 </Link>
@@ -151,9 +134,8 @@ export function Header() {
 
         {/* Mobile Navigation */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-500 bg-background ${
-            isOpen ? "max-h-[500px] pb-6" : "max-h-0"
-          }`}
+          className={`lg:hidden overflow-hidden transition-all duration-500 bg-white/95 ${isOpen ? "max-h-[500px] pb-6" : "max-h-0"
+            }`}
         >
           <div className="flex flex-col gap-1 pt-4 border-t border-border/30">
             {navigation.map((item) =>
@@ -167,9 +149,8 @@ export function Header() {
                     <ChevronDown className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} />
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-300 ${
-                      dropdownOpen ? "max-h-48" : "max-h-0"
-                    }`}
+                    className={`overflow-hidden transition-all duration-300 ${dropdownOpen ? "max-h-48" : "max-h-0"
+                      }`}
                   >
                     {item.dropdown.map((subItem) => (
                       <a
@@ -189,11 +170,10 @@ export function Header() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-4 py-3 text-sm font-medium ${
-                    location.pathname === item.href
-                      ? "text-primary"
-                      : "text-foreground/70"
-                  }`}
+                  className={`px-4 py-3 text-sm font-medium ${location.pathname === item.href
+                    ? "text-primary"
+                    : "text-foreground/70"
+                    }`}
                 >
                   {item.name}
                 </Link>

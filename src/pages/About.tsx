@@ -59,8 +59,8 @@ const About = () => {
 
               <div className="mt-12 pt-12 border-t border-border/30">
                 <blockquote className="relative">
-                  <div className="text-6xl text-primary/30 font-serif absolute -top-4 -left-2">"</div>
-                  <p className="text-xl font-serif text-foreground/90 italic pl-8">
+                  <div className="text-6xl text-primary/30 font-sans absolute -top-4 -left-2">"</div>
+                  <p className="text-xl font-sans text-foreground/90 italic pl-8">
                     Excellence is not a destination but a continuous journey of 
                     dedication, precision, and unwavering commitment to our clients.
                   </p>
@@ -71,7 +71,7 @@ const About = () => {
             {/* Right Column - Values */}
             <div className="lg:col-span-5">
               <div className="card-luxury p-8 md:p-10 sticky top-32">
-                <h3 className="font-serif text-2xl text-foreground mb-8">
+                <h3 className="font-sans text-2xl text-foreground mb-8">
                   Our Values
                 </h3>
                 <div className="space-y-6">
@@ -81,12 +81,12 @@ const About = () => {
                       className="flex items-start gap-4 group"
                     >
                       <div className="w-10 h-10 rounded-sm bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
-                        <span className="text-primary font-serif text-lg">
+                        <span className="text-primary font-sans text-lg">
                           {index + 1}
                         </span>
                       </div>
                       <div>
-                        <h4 className="font-serif text-lg text-foreground mb-1">
+                        <h4 className="font-sans text-lg text-foreground mb-1">
                           {value.title}
                         </h4>
                         <p className="text-muted-foreground text-sm">
@@ -108,7 +108,7 @@ const About = () => {
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             {values.map((value) => (
               <div key={value.title} className="text-center">
-                <span className="text-primary font-serif text-xl">
+                <span className="text-primary font-sans text-xl">
                   {value.title}
                 </span>
               </div>

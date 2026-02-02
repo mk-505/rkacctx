@@ -30,7 +30,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="lg:col-span-5">
               <div className="sticky top-32">
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-8">
+                <h2 className="font-sans text-2xl md:text-3xl text-foreground mb-8">
                   Contact Information
                 </h2>
                 
@@ -96,7 +96,7 @@ const Contact = () => {
             {/* Contact Form */}
             <div className="lg:col-span-7">
               <div className="card-luxury p-8 md:p-12">
-                <h2 className="font-serif text-2xl md:text-3xl text-foreground mb-2">
+                <h2 className="font-sans text-2xl md:text-3xl text-foreground mb-2">
                   Send Us a Message
                 </h2>
                 <p className="text-muted-foreground mb-8">

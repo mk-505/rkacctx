@@ -1,19 +1,27 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
 import logo from "@/assets/logo.jpg";
+import rkSymbol from "@/assets/rk_symbol.png";
 
 export function Footer() {
   return (
-    <footer className="bg-navy-900 text-cream-100">
+    <footer className="bg-navy-800 text-cream-100">
       <div className="luxury-container py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Logo & Trust Statement */}
           <div className="lg:col-span-2">
-            <img
-              src={logo}
-              alt="RK AccTx Inc."
-              className="h-10 w-auto mb-6 brightness-0 invert"
-            />
+            <div className="flex items-center gap-4 mb-6">
+              <img
+                src={logo}
+                alt="RK AccTx Inc."
+                className="h-10 w-auto brightness-0 invert"
+              />
+              <img
+                src={rkSymbol}
+                alt="RK Symbol"
+                className="h-10 w-auto opacity-90"
+              />
+            </div>
             <p className="text-cream-100/70 leading-relaxed max-w-md mb-6">
               Trusted advisors delivering sophisticated accounting and tax solutions 
               with discretion and precision. Your success is our commitment.
@@ -23,7 +31,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-cream-100">Navigation</h4>
+            <h4 className="font-sans text-lg mb-6 text-cream-100">Navigation</h4>
             <nav className="flex flex-col gap-3">
               <Link
                 to="/"
@@ -62,7 +70,7 @@ export function Footer() {
 
           {/* Contact Information */}
           <div>
-            <h4 className="font-serif text-lg mb-6 text-cream-100">Contact</h4>
+            <h4 className="font-sans text-lg mb-6 text-cream-100">Contact</h4>
             <div className="flex flex-col gap-4">
               <a
                 href="tel:905-792-9229"

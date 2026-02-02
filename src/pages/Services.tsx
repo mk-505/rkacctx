@@ -136,7 +136,7 @@ const Services = () => {
                       <service.icon className="w-6 h-6 text-primary" />
                     </div>
                     <div>
-                      <h3 className="font-serif text-xl text-foreground mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="font-sans text-xl text-foreground mb-2 group-hover:text-primary transition-colors">
                         {service.title}
                       </h3>
                       <p className="text-muted-foreground leading-relaxed">
@@ -152,8 +152,8 @@ const Services = () => {
       ))}
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-navy-900 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-800 to-navy-900" />
+      <section className="py-20 md:py-28 bg-navy-700 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-b from-navy-600 to-navy-700" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         
         <div className="relative luxury-container text-center">
