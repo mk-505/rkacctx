@@ -30,6 +30,7 @@ const navigation = [
     ],
   },
   { name: "Contact", href: "/contact" },
+  { name: "FAQ", href: "/faq" },
 ];
 
 export function Header() {

@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo.jpg";
 import rkSymbol from "@/assets/rk_symbol.png";
 
 export function Footer() {
@@ -11,11 +10,6 @@ export function Footer() {
           {/* Logo & Trust Statement */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-4 mb-6">
-              <img
-                src={logo}
-                alt="RK AccTx Inc."
-                className="h-10 w-auto brightness-0 invert"
-              />
               <img
                 src={rkSymbol}
                 alt="RK Symbol"
@@ -56,6 +50,12 @@ export function Footer() {
                 className="text-cream-100/70 hover:text-primary transition-colors text-sm"
               >
                 Contact
+              </Link>
+              <Link
+                to="/faq"
+                className="text-cream-100/70 hover:text-primary transition-colors text-sm"
+              >
+                FAQ
               </Link>
               <a
                 href="https://taxfolder.com/"

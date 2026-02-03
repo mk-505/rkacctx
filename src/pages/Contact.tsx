@@ -68,8 +68,7 @@ const Contact = () => {
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Address</p>
                       <p className="text-foreground text-lg">
-                        RK AccTx<br />
-                        Unit 237, 2130 N Park Dr<br />
+                        Unit 237, 2130 North Park Dr<br />
                         Brampton, ON L6S 5M4
                       </p>
                     </div>

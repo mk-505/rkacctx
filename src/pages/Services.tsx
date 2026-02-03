@@ -74,7 +74,7 @@ const serviceCategories = [
       },
       {
         icon: ClipboardList,
-        title: "Notice to Reader & Financial Reporting",
+        title: "Compiled Financial Information & Financial Reporting",
         description: "Insightful reports to guide strategic decision-making.",
       },
     ],

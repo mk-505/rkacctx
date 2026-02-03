@@ -34,13 +34,13 @@ const About = () => {
             {/* Left Column - Content */}
             <div className="lg:col-span-7">
               <div className="prose prose-lg max-w-none">
-                <p className="text-xl text-foreground/90 leading-relaxed mb-8">
+                <p className="text-lg text-foreground/95 leading-relaxed mb-8">
                   For over 20 years, RK AccTx has partnered with discerning clients 
                   to deliver sophisticated accounting and tax solutions that drive 
                   long-term success and preserve wealth.
                 </p>
                 
-                <p className="text-muted-foreground leading-relaxed mb-8">
+                <p className="text-lg text-foreground/95 leading-relaxed mb-8">
                   Our team works intimately with each client, combining deep expertise 
                   with strategic insight to accelerate business growth, mitigate complex 
                   risks, and unlock high-value opportunities. With unwavering dedication 
@@ -48,7 +48,7 @@ const About = () => {
                   and measurable results.
                 </p>
 
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-lg text-foreground/95 leading-relaxed">
                   Leveraging extensive experience across diverse industries, we provide 
                   bespoke tax planning and advisory services, crafted to align with your 
                   unique objectives. Our proactive approach ensures your business adapts 
@@ -60,7 +60,7 @@ const About = () => {
               <div className="mt-12 pt-12 border-t border-border/30">
                 <blockquote className="relative">
                   <div className="text-6xl text-primary/30 font-sans absolute -top-4 -left-2">"</div>
-                  <p className="text-xl font-sans text-foreground/90 italic pl-8">
+                  <p className="text-lg font-sans text-foreground/95 italic pl-8">
                     Excellence is not a destination but a continuous journey of 
                     dedication, precision, and unwavering commitment to our clients.
                   </p>
@@ -71,7 +71,7 @@ const About = () => {
             {/* Right Column - Values */}
             <div className="lg:col-span-5">
               <div className="card-luxury p-8 md:p-10 sticky top-32">
-                <h3 className="font-sans text-2xl text-foreground mb-8">
+                <h3 className="font-sans text-2xl text-foreground/95 mb-8">
                   Our Values
                 </h3>
                 <div className="space-y-6">
@@ -86,10 +86,10 @@ const About = () => {
                         </span>
                       </div>
                       <div>
-                        <h4 className="font-sans text-lg text-foreground mb-1">
+                        <h4 className="font-sans text-lg text-foreground/95 mb-1">
                           {value.title}
                         </h4>
-                        <p className="text-muted-foreground text-sm">
+                        <p className="text-foreground/95 text-sm">
                           {value.description}
                         </p>
                       </div>
@@ -108,7 +108,7 @@ const About = () => {
           <div className="flex flex-wrap justify-center gap-8 md:gap-16">
             {values.map((value) => (
               <div key={value.title} className="text-center">
-                <span className="text-primary font-sans text-xl">
+                <span className="text-primary font-sans text-xl text-foreground/95">
                   {value.title}
                 </span>
               </div>
