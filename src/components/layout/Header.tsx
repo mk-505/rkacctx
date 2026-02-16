@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown, ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const navigation = [
@@ -12,6 +11,8 @@ const navigation = [
     name: "Important Links",
     href: "#",
     dropdown: [
+    
+
       {
         name: "Canada Revenue Agency (CRA)",
         href: "https://www.canada.ca/en/revenue-agency.html",
@@ -30,7 +31,6 @@ const navigation = [
     ],
   },
   { name: "Contact", href: "/contact" },
-  { name: "FAQ", href: "/faq" },
 ];
 
 export function Header() {
@@ -107,23 +107,6 @@ export function Header() {
             )}
           </div>
 
-          {/* Client Login Button */}
-          <div className="hidden lg:block">
-            <Button
-              asChild
-              variant="clientLogin"
-              size="lg"
-            >
-              <a
-                href="https://taxfolder.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Client Login
-              </a>
-            </Button>
-          </div>
-
           {/* Mobile Menu Button */}
           <button
             className="lg:hidden p-2 text-foreground"
@@ -180,22 +163,6 @@ export function Header() {
                 </Link>
               )
             )}
-            <div className="px-4 pt-4">
-              <Button
-                asChild
-                variant="clientLogin"
-                className="w-full"
-                size="lg"
-              >
-                <a
-                  href="https://taxfolder.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Client Login
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </nav>

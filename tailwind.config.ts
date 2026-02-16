@@ -78,8 +78,8 @@ export default {
         },
       },
       fontFamily: {
-        serif: ["'Playfair Display'", "serif"],
-        sans: ["'Inter'", "sans-serif"],
+        serif: ["'Times New Roman'", "Times", "serif"],
+        sans: ["'Times New Roman'", "Times", "serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -112,7 +112,7 @@ export default {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-pattern": "linear-gradient(135deg, hsl(220 40% 13%) 0%, hsl(220 38% 20%) 50%, hsl(220 36% 16%) 100%)",
+        "hero-pattern": "linear-gradient(135deg, hsl(210 100% 16%) 0%, hsl(210 95% 20%) 50%, hsl(210 90% 24%) 100%)",
         "gold-gradient": "linear-gradient(135deg, hsl(43 70% 47%) 0%, hsl(43 80% 55%) 100%)",
       },
     },

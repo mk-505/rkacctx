@@ -1,8 +1,13 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+
+const EMAILJS_SERVICE_ID = "service_pckd1bb";
+const EMAILJS_TEMPLATE_ID = "template_cydxpvv";
+const EMAILJS_PUBLIC_KEY = "SgkcX_RCED3oAOS0B";
 
 interface ContactFormProps {
   variant?: "default" | "expanded" | "dark";
@@ -23,22 +28,52 @@ export function ContactForm({ variant = "default" }: ContactFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const fullMessage = [
+      formData.message,
+      formData.phone && `\n\nPhone: ${formData.phone}`,
+      formData.company && `Company: ${formData.company}`,
+    ]
+      .filter(Boolean)
+      .join("\n");
 
-    toast({
-      title: "Message Sent",
-      description: "Thank you for reaching out. We'll be in touch shortly.",
-    });
+    const templateParams = {
+      title: "RK AccTx Website",
+      name: formData.name,
+      email: formData.email,
+      message: fullMessage,
+      time: new Date().toLocaleString("en-CA", {
+        dateStyle: "medium",
+        timeStyle: "short",
+      }),
+    };
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      company: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+      toast({
+        title: "Message Sent",
+        description: "Thank you for reaching out. We'll be in touch shortly.",
+      });
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        message: "",
+      });
+    } catch {
+      toast({
+        title: "Failed to Send",
+        description: "Something went wrong. Please try again or email us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (

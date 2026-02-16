@@ -68,8 +68,8 @@ const Contact = () => {
                     <div>
                       <p className="text-sm text-muted-foreground mb-1">Address</p>
                       <p className="text-foreground text-lg">
-                        Unit 237, 2130 North Park Dr<br />
-                        Brampton, ON L6S 5M4
+                        2130 North Park Dr, Unit 237<br />
+                        Brampton, ON L6S 0C9
                       </p>
                     </div>
                   </div>

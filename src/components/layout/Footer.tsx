@@ -51,20 +51,6 @@ export function Footer() {
               >
                 Contact
               </Link>
-              <Link
-                to="/faq"
-                className="text-cream-100/70 hover:text-primary transition-colors text-sm"
-              >
-                FAQ
-              </Link>
-              <a
-                href="https://taxfolder.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-primary hover:text-primary/80 transition-colors text-sm font-medium"
-              >
-                Client Login
-              </a>
             </nav>
           </div>
 
@@ -89,8 +75,8 @@ export function Footer() {
               <div className="flex items-start gap-3 text-cream-100/70 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 text-primary/70 flex-shrink-0" />
                 <span>
-                  Unit 237, 2130 N Park Dr<br />
-                  Brampton, ON L6S 5M4
+                  2130 North Park Dr, Unit 237<br />
+                  Brampton, ON L6S 0C9
                 </span>
               </div>
             </div>
